@@ -3,7 +3,7 @@
 Create multiple ads in Meta from generated creatives.
 
 Usage:
-    python scripts/batch_create_ads.py --account-id ACT_1234567890 --campaign-id 123456789 --creatives creatives.json
+    python scripts/batch_create_ads.py --account-id ACT_1234567890 --adset-id 123456789 --creatives creatives.json
 """
 
 import argparse
@@ -61,12 +61,12 @@ def batch_create_ads(account_id, adset_id, creatives_file):
                 print(f"  Description: {creative.get('description', 'N/A')}")
                 print(f"  CTA: {creative.get('cta', 'N/A')}")
                 
-                # Ad would be created here with FacebookAdsApi
+                # TODO: Uncomment below to create real ads via Meta API
                 # ad = Ad(adset_id).create(ad_data)
                 # created_ads.append(ad)
-                
+
                 created_ads.append(ad_data)
-                print(f"  ✓ Ad created (status: PAUSED)\n")
+                print(f"  [DRY RUN] Ad prepared but NOT created in Meta (API call not yet active)\n")
             
             except Exception as e:
                 error_msg = f"✗ Failed to create ad {idx}: {str(e)}"
@@ -74,7 +74,7 @@ def batch_create_ads(account_id, adset_id, creatives_file):
                 print(error_msg, file=sys.stderr)
         
         print(f'{"="*80}')
-        print(f'Summary: {len(created_ads)} ads created, {len(errors)} errors\n')
+        print(f'Summary: {len(created_ads)} ads prepared (dry run), {len(errors)} errors\n')
         
         if errors:
             sys.exit(1)

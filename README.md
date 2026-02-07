@@ -1,13 +1,17 @@
 # Meta Creative AI Generation
 
-AI-powered creative generation and bulk ad creation for Meta platforms using Google Gemini and Facebook Business SDK.
+Template for AI-powered creative generation and bulk ad creation for Meta platforms.
 
-## Features
+## Status
 
-- **AI Creative Generation** - Generate ad copy variations using Gemini API
+> **Note:** This repository is a **template/scaffold**. The Gemini AI integration and Meta ad creation API calls are not yet implemented - scripts use placeholder data to demonstrate the workflow structure. See the individual script sections below for details on what needs to be completed.
+
+## Features (Planned)
+
+- **AI Creative Generation** - Generate ad copy variations using Gemini API (not yet connected)
 - **Tone-Based Customization** - Create creatives with specific tones (energetic, professional, casual, luxury)
-- **Bulk Ad Creation** - Create multiple ads from generated creatives
-- **Creative Testing** - Test generation pipeline with sample data
+- **Bulk Ad Creation** - Create multiple ads from generated creatives (API calls not yet active)
+- **Creative Testing** - Test generation pipeline with sample data (working)
 - **JSON Configuration** - Manage creatives via JSON files
 - **Error Handling** - Robust error handling and retry logic
 
@@ -152,9 +156,9 @@ Creative 3:
 
 ---
 
-### Script 2: `batch_create_ads.py` - Bulk Ad Creation
+### Script 2: `batch_create_ads.py` - Bulk Ad Creation (Dry Run)
 
-**Purpose**: Create multiple ads in Meta Ads Manager from generated creatives.
+**Purpose**: Prepare ad definitions from generated creatives. Currently runs in dry-run mode (ads are validated but not created in Meta). Enable real API calls by uncommenting the ad creation code in the script.
 
 **Command**:
 
@@ -212,22 +216,22 @@ Creating Ad 1: Nike Running Shoes - Transform Your Performance_1
  Headline: Nike Running Shoes - Transform Your Performance
  Description: Experience premium running shoes. Limited offer. Save 20%.
  CTA: Shop Now
-- Ad created (status: PAUSED)
+ [DRY RUN] Ad prepared but NOT created in Meta (API call not yet active)
 
 Creating Ad 2: Nike Running Shoes - Designed for Champions_2
  Headline: Nike Running Shoes - Designed for Champions
  Description: Premium quality guaranteed. Free shipping on orders over $100.
  CTA: Explore
-- Ad created (status: PAUSED)
+ [DRY RUN] Ad prepared but NOT created in Meta (API call not yet active)
 
 Creating Ad 3: Nike Running Shoes - Limited Time Offer_3
  Headline: Nike Running Shoes - Limited Time Offer
  Description: Get the latest Nike running shoes with exclusive pricing.
  CTA: Learn More
-- Ad created (status: PAUSED)
+ [DRY RUN] Ad prepared but NOT created in Meta (API call not yet active)
 
 ================================================================================
-Summary: 3 ads created, 0 errors
+Summary: 3 ads prepared (dry run), 0 errors
 ```
 
 ---
@@ -388,9 +392,9 @@ pip install facebook_business
 
 ---
 
-## licence
+## License
 
-MIT licence - See licence file
+MIT License - See LICENSE file
 
 ## Author
 

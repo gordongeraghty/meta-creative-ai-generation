@@ -66,6 +66,10 @@ Thumbs.db
 *client_secret*.json
 google-ads.yaml
 
+# Generated output
+test_creatives_output.json
+creatives_output*.json
+
 # Node.js (for n8n/Zapier repos)
 node_modules/
 npm-debug.log

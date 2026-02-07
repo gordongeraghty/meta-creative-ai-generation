@@ -25,9 +25,10 @@ def generate_creatives(brand, product, tone, count=3):
         count (int): Number of creatives to generate
     """
     try:
-        # Import Gemini (mock implementation - use actual API in production)
-        print(f"\nGenerating {count} creative variations for {brand} {product}...\n")
+        print(f"\nGenerating {count} creative variations for {brand} {product}...")
         print(f"{"="*80}")
+        print(f"NOTE: Using template data. Connect Gemini API for AI-generated creatives.")
+        print(f"{"="*80}\n")
         
         creatives = []
         tones_descriptions = {
